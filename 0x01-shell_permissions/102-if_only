@@ -1,7 +1,2 @@
 #!/bin/bash
-owner=$(stat -c '%U' hello)
-if test "$owner" = "guillaume"
-then
-    chown betty hello
-    echo "Owner of 'hello' has been changed to 'betty'"
-fi
+[ "$(stat -c '%U' hello)" = "guillaume" ] && chown betty hello
