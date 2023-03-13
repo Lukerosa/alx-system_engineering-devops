@@ -1,2 +1,2 @@
 #!/bin/bash
-echo | sort | unique -u
+cat | tr ' ' '\n' | sort | uniq -u
